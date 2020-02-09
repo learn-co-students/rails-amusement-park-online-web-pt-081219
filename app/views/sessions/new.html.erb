@@ -1,0 +1,8 @@
+<h1>Log In</h1>
+<%= form_tag('/signin') do %>
+  Username:
+  <%= select_tag "user_name", options_from_collection_for_select(@users, "id", "name") %>
+  Password:
+  <%= text_field_tag 'password' %>
+  <%= submit_tag "Sign In" %>
+<% end %>
