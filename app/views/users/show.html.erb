@@ -1,0 +1,13 @@
+<h1>Welcome <%= @user.name %></h1>
+<% if @user.admin %>
+<p>ADMIN Control</p>
+<% else %>
+<% if flash[:alert] %>
+	<p style="color: red;"><%= flash[:alert] %></p>
+<% end %>
+<p>Mood: <%= @user.mood %></p>
+<p>Height: <%= @user.height %></p>
+<p>Tickets: <%= @user.tickets %></p>
+<%end%>
+
+<%= link_to "See attractions", attractions_path %>
