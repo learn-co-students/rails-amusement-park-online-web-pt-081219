@@ -1,0 +1,14 @@
+
+
+Go on <%= @attraction.name %>
+    <%= @attraction.tickets %>
+    <%= @attraction.nausea_rating %>
+    <%= @attraction.happiness_rating %>
+    <p><%= @attraction.min_height %></p>
+    <%= button_to 'Go on this ride', attraction_path(@attraction), method: 'post' %>
+
+
+    <% if @user.admin %>
+<p><%= link_to 'Edit Attraction', edit_attraction_path(@attraction) %></p>
+
+<% end %>
