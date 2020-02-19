@@ -1,2 +1,9 @@
 <h1>Edit Attraction</h1>
 <%= render partial: 'form', locals: {attraction: @attraction} %>
+
+<%# partials have to have locals %>
+     <%# Failure/Error: <%= form_for attraction do |f| %>
+     
+     <%# ActionView::Template::Error:
+       undefined local variable or method `attraction' for #<#<Class:0x00007ff074e0f4e0>:0x00007ff0722e42c0>
+       Did you mean?  @attraction %> 
