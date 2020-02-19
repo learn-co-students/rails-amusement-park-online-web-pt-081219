@@ -37,7 +37,14 @@
 
     <!-- content -->
     <div class="container"  role="main">
-    
+    <% flash.each do |type, msg| %>
+  <div>
+    <%= msg %> 
+    <%# referring to flash msg in ride controller that knows msh through take_ride %>
+    <%# type,msg      type,warning     typ,msg %>
+  </div>
+<% end %>
+
       <%= yield %>
     </div>
   </body>

@@ -38,10 +38,10 @@ class AttractionsController < ApplicationController
       end
     end
 
-    # def destroy
-    #   @attraction.destroy
-    #   redirect_to attractions_path
-    # end
+    def destroy
+      @attraction.destroy
+      redirect_to attractions_path
+    end
   
     private
     def set_attraction
