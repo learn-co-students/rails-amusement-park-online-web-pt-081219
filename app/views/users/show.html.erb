@@ -1,0 +1,22 @@
+<div class="center">
+<% flash.each do |type, msg| %>
+    <%= msg %>
+<% end %>
+<br><br>
+
+<h3><%= @user.name %><br></h3>
+<% if @user.admin? %>
+  <p><strong>ADMIN</strong></p>
+<% end %>
+
+Height:
+<%= @user.height %><br>
+Mood:
+<%= @user.mood %><br>
+Nausea:
+<%= @user.nausea %><br>
+Tickets:
+<%= @user.tickets %><br>
+
+<%= link_to 'See attractions', attractions_path %>
+</div>

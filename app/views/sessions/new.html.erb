@@ -1,0 +1,5 @@
+<%= form_for :user, url: 'signin' do |f| %>
+  Your name: <%= f.select :name, User.pluck(:name) %>
+  Your Password: <%= f.password_field :password, id: :password %>
+  <%= f.submit ("Sign In")%>
+<% end %>
